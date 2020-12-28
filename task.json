@@ -1,28 +1,33 @@
 {
   "Tasks": [
     {
-      "id": 0,
+      "taskName": "Clean Car",
+      "taskDue": "Today",
+      "completedTask": "false",
+      "id": 0
+    },
+    {
+      "taskName": "Clean Roof",
+      "taskDue": "Today",
+      "id": 1
+    },
+    {
+      "taskName": "Clean Roof",
+      "taskDue": "Today",
+      "completedTask": "false",
+      "id": 2
+    },
+    {
       "taskName": "Clean Room",
-      "taskDue": "Monday",
-      "completedTask": true
+      "taskDue": "Today",
+      "completedTask": "false",
+      "id": 3
     },
     {
-      "id": 1,
-      "taskName": "Wash dog",
-      "taskDue": "Tuesday",
-      "completedTask": false
-    },
-    {
-      "id": 2,
-      "taskName": "Cook Dinner",
-      "taskDue": "Tonight",
-      "completedTask": true
-    },
-    {
-      "id": 3,
-      "taskName": "Play Video Games",
-      "taskDue": "Tonight",
-      "completedTask": false
+      "taskName": "Clean Other Car",
+      "taskDue": "someday",
+      "completedTask": "false",
+      "id": 4
     }
   ]
 }

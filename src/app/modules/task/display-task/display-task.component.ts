@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Task } from 'src/app/models/task';
-
+import { Router } from '@angular/router';
 import { TaskService } from '../../../services/task.service';
 import { from } from 'rxjs';
+import { TaskModule } from '../task.module';
 @Component({
   selector: 'app-display-task',
   templateUrl: './display-task.component.html',
@@ -17,7 +18,11 @@ export class DisplayTaskComponent implements OnInit {
   public tasks: Task[];
   dataService: TaskService;
 
-  constructor(private http: HttpClient, private taskService: TaskService) {
+  constructor(
+    private http: HttpClient,
+    private taskService: TaskService,
+    private router: Router
+  ) {
     this.dataService = this.taskService;
   }
 
@@ -37,6 +42,14 @@ export class DisplayTaskComponent implements OnInit {
     this.getTasks();
   }
   onSubmit() {
-    console.log('suubmit successful: ', this.task);
+    // for (let i = 0; i < Task.length; i++) {
+    //   console.log(Task[i].id);
+    // }
+    // return (document.getElementById('showTask').innerHTML =
+    //   this.task.taskName + ' ' + this.task.taskDue);
+    this.http.post(this.taskRoute, this.task).subscribe((res: Response) => {
+      this.router.navigate(['task']);
+    });
+    window.location.reload();
   }
 }

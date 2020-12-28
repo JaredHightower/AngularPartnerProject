@@ -9,7 +9,7 @@ import { TaskModule } from './modules/task/task.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, TaskModule],
-  providers: [TaskService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

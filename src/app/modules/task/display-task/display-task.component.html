@@ -21,15 +21,26 @@
       [ngModelOptions]="{ standalone: true }"
     />
     <label for="Task Status">Is this completed?</label>
+    <select
+      type="text"
+      id="taskStatus"
+      placeholder="Enter Task"
+      required
+      [(ngModel)]="task.completedTask"
+      [ngModelOptions]="{ standalone: true }"
+    >
+      <option value="true" selected>Yes</option>
+      <option value="false" selected>No</option>
+    </select>
     <br />
     <button id="createNewTask">Create Task</button>
   </form>
-  <ol>
+  <ul>
     <li *ngFor="let task of tasks">
-      <p>
+      <p id="showTask">
         {{ task.id + 1 }}. {{ task.taskName }}: {{ task.taskDue }}
-        {{ task.completedTask ? "&#10003;" : "&#10005;" }}
+        {{ task.completedTask ? "&#10005;" : "&#10003;" }}
       </p>
     </li>
-  </ol>
+  </ul>
 </div>
