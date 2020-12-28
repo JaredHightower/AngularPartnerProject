@@ -10,7 +10,6 @@ export class DisplayTaskComponent implements OnInit {
   private taskRoute = 'http://localhost:3000/Tasks';
   public tasks: Task[];
   constructor(private http: HttpClient) {}
-  //constructor() {}
 
   getTasks() {
     //when callthing this you need to
