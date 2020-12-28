@@ -1,0 +1,20 @@
+<div>
+  Name:
+  <input [(ngModel)]="editTask.taskName" placeholder="Enter task to edit" />
+  <br />
+  Estimated Completion Time:
+  <input
+    type="number"
+    [(ngModel)]="editTask.taskDue"
+    placeholder="task.taskDue"
+  />
+  <br />
+  Extra Requirements:
+  <input
+    type="text"
+    [(ngModel)]="editTask.completedTask"
+    placeholder="task.completedTask"
+  />
+  <br />
+  <button (click)="saveTask()">Save</button>
+</div>

@@ -5,29 +5,6 @@
       "taskDue": "Today",
       "completedTask": "false",
       "id": 0
-    },
-    {
-      "taskName": "Clean Roof",
-      "taskDue": "Today",
-      "id": 1
-    },
-    {
-      "taskName": "Clean Roof",
-      "taskDue": "Today",
-      "completedTask": "false",
-      "id": 2
-    },
-    {
-      "taskName": "Clean Room",
-      "taskDue": "Today",
-      "completedTask": "false",
-      "id": 3
-    },
-    {
-      "taskName": "Clean Other Car",
-      "taskDue": "someday",
-      "completedTask": "false",
-      "id": 4
     }
   ]
 }

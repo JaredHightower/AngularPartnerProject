@@ -1,5 +1,5 @@
-<div id="display-task-list">
-  <form (ngSubmit)="onSubmit()">
+<div>
+  <form (ngSubmit)="addTask()">
     <!-- <input type="text" id="newTask" placeholder="Enter Task" required [([(ngModel)]="model.id")]/> -->
     <label for="Task Name">Task Name</label>
 
@@ -8,7 +8,7 @@
       id="taskName"
       placeholder="Enter Task"
       required
-      [(ngModel)]="task.taskName"
+      [(ngModel)]="newTask.taskName"
       [ngModelOptions]="{ standalone: true }"
     />
     <label for="Task Due">When is Your Task Due?</label>
@@ -17,30 +17,19 @@
       id="taskDue"
       placeholder="Enter Task"
       required
-      [(ngModel)]="task.taskDue"
+      [(ngModel)]="newTask.taskDue"
       [ngModelOptions]="{ standalone: true }"
     />
-    <label for="Task Status">Is this completed?</label>
-    <select
+    <!-- <select
       type="text"
       id="taskStatus"
       placeholder="Enter Task"
       required
-      [(ngModel)]="task.completedTask"
-      [ngModelOptions]="{ standalone: true }"
+      [(ngModel)]="newTask.completedTask"
     >
       <option value="true" selected>Yes</option>
       <option value="false" selected>No</option>
-    </select>
-    <br />
+    </select> -->
     <button id="createNewTask">Create Task</button>
   </form>
-  <ul>
-    <li *ngFor="let task of tasks">
-      <p id="showTask">
-        {{ task.id + 1 }}. {{ task.taskName }}: {{ task.taskDue }}
-        {{ task.completedTask ? "&#10005;" : "&#10003;" }}
-      </p>
-    </li>
-  </ul>
 </div>
