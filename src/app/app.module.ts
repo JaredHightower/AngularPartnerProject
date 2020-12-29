@@ -8,7 +8,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TaskService } from '../app/services/task.service';
 //import { TaskModule } from './modules/task/task.module';
 import { AddTaskComponent } from './components/add-task/add-task.component';
-import { EditTaskComponent } from './components/edit-task/edit-task.component';
+//import { EditTaskComponent } from './components/edit-task/edit-task.component';
 import { FormsModule } from '@angular/forms';
 import { DisplayTaskComponent } from './components/display-task/display-task.component';
 import { TaskDetailsComponent } from './components/task-details/task-details.component';
@@ -17,7 +17,6 @@ import { TaskDetailsComponent } from './components/task-details/task-details.com
     AppComponent,
     DisplayTaskComponent,
     AddTaskComponent,
-    EditTaskComponent,
     TaskDetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
