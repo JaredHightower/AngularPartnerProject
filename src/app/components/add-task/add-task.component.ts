@@ -14,8 +14,8 @@ export class AddTaskComponent implements OnInit {
   addTask() {
     this.taskService
       .addTask(this.newTask)
-      .subscribe((t) => this.router.navigate(['task']));
-    window.location.reload();
+      .subscribe((t) => this.router.navigate(['/task']));
+    // window.location.reload();
   }
 
   constructor(private taskService: TaskService, private router: Router) {}

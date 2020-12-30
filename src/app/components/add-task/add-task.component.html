@@ -1,6 +1,5 @@
 <div>
   <form (ngSubmit)="addTask()">
-    <!-- <input type="text" id="newTask" placeholder="Enter Task" required [([(ngModel)]="model.id")]/> -->
     <label for="Task Name">Task Name</label>
 
     <input
@@ -11,25 +10,29 @@
       [(ngModel)]="newTask.taskName"
       [ngModelOptions]="{ standalone: true }"
     />
+    <br>
     <label for="Task Due">When is Your Task Due?</label>
     <input
-      type="text"
+      type="date"
       id="taskDue"
-      placeholder="Enter Task"
+      placeholder="Enter Due Date"
       required
       [(ngModel)]="newTask.taskDue"
       [ngModelOptions]="{ standalone: true }"
     />
-    <!-- <select
-      type="text"
+    <br>
+    <label for="taskStatus">Is task complete?</label>
+    <select
+      type="dropdown"
       id="taskStatus"
-      placeholder="Enter Task"
       required
       [(ngModel)]="newTask.completedTask"
+      [ngModelOptions]="{ standalone: true }"
     >
       <option value="true" selected>Yes</option>
       <option value="false" selected>No</option>
-    </select> -->
+    </select>
+    <br>
     <button id="createNewTask">Create Task</button>
   </form>
 </div>
