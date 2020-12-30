@@ -5,7 +5,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { DisplayTaskComponent } from './components/display-task/display-task.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
-import { EditTaskComponent } from './components/edit-task/edit-task.component';
 import { TaskDetailsComponent } from './components/task-details/task-details.component';
 
 const routes: Routes = [
@@ -23,13 +22,9 @@ const routes: Routes = [
     component: AddTaskComponent,
   },
   {
-    path: 'edit/:id',
-    component: EditTaskComponent,
-  },
-  {
     path: 'detail/:id',
     component: TaskDetailsComponent,
-  },
+  }
 ];
 
 @NgModule({

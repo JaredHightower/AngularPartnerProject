@@ -1,38 +1,20 @@
-<div>
+<div class="container">
   <form (ngSubmit)="addTask()">
-    <label for="Task Name">Task Name</label>
-
-    <input
-      type="text"
-      id="taskName"
-      placeholder="Enter Task"
-      required
-      [(ngModel)]="newTask.taskName"
-      [ngModelOptions]="{ standalone: true }"
-    />
+    <label for="taskName" class="form-label">Task Name</label>
+    <input type="text" id="taskName" class="form-control" placeholder="Enter Task"
+      [(ngModel)]="newTask.taskName" [ngModelOptions]="{ standalone: true }" required />
     <br>
-    <label for="Task Due">When is Your Task Due?</label>
-    <input
-      type="date"
-      id="taskDue"
-      placeholder="Enter Due Date"
-      required
-      [(ngModel)]="newTask.taskDue"
-      [ngModelOptions]="{ standalone: true }"
-    />
+    <label for="taskDue">When is Your Task Due?</label>
+    <input type="date" id="taskDue" class="form-control" placeholder="Enter Due Date" 
+      [(ngModel)]="newTask.taskDue" [ngModelOptions]="{ standalone: true }" required />
     <br>
     <label for="taskStatus">Is task complete?</label>
-    <select
-      type="dropdown"
-      id="taskStatus"
-      required
-      [(ngModel)]="newTask.completedTask"
-      [ngModelOptions]="{ standalone: true }"
-    >
-      <option value="true" selected>Yes</option>
-      <option value="false" selected>No</option>
+    <select type="dropdown" id="taskStatus" class="form-select" aria-label="Default select example" required [(ngModel)]="newTask.completedTask"
+      [ngModelOptions]="{ standalone: true }">
+      <option value="true">Yes</option>
+      <option value="false">No</option>
     </select>
     <br>
-    <button id="createNewTask">Create Task</button>
+    <button class="btn btn-success" id="createNewTask">Create Task</button>
   </form>
 </div>
